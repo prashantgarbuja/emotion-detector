@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 
 # Load the model
 emotion_model = load_model('fer2013_mini_XCEPTION.102-0.66.hdf5')
-emotion_lables = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
+emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
 # Capture the video from webcam
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -28,7 +28,7 @@ while True:
 
         preds = emotion_model.predict(roi)[0]
         emotion_probability = np.argmax(preds)
-        emotion_text = emotion_lables[emotion_probability]
+        emotion_text = emotion_labels[emotion_probability]
 
         # Draw the bounding box around the face
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
