@@ -60,6 +60,9 @@ The script performs the following steps:
    - Resizes and preprocesses the region of interest.
    - Passes it through the model for emotion classification.
    - Draws a bounding box around the face with the predicted emotion label.
+     
+## Result
+![angry](https://github.com/prashantgarbuja/emotion-detector/blob/main/images/angry.png) ![neutral](https://github.com/prashantgarbuja/emotion-detector/blob/main/images/neutral.png) ![happy](https://github.com/prashantgarbuja/emotion-detector/blob/main/images/happy.png)
 
 ## Acknowledgements
 
